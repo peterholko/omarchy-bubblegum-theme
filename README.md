@@ -36,6 +36,21 @@ git -C "$HOME/.config/omarchy/themes/bubblegum" pull --ff-only
 omarchy theme set bubblegum
 ```
 
+## Files and other GNOME apps
+
+Bubblegum requests a light appearance using `mode = "light"` in `colors.toml`. The empty `light.mode` file also selects light mode in older Omarchy versions. Both are supported by [Omarchy's light-mode theme format](https://omarchy.org/manual/making-your-own-theme/#light-mode).
+
+After updating, reapply Bubblegum with `omarchy theme set bubblegum` so Omarchy updates the desktop's appearance settings.
+
+If Files still opens with a dark background, run these commands from the affected user's desktop terminal, **without `sudo`**, then reopen Files:
+
+```bash
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
+```
+
+These settings apply to Files and other GNOME applications in that user's desktop session. Omarchy updates them again when you select another theme.
+
 ## License
 
 [MIT](LICENSE), with the original Omarchy copyright notice retained. See [attribution](ATTRIBUTION.md) for the source of the theme and preview.
