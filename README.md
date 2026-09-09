@@ -24,6 +24,7 @@ The installer downloads and activates **Bubblegum**. It then appears in Omarchy'
 - Pink lighting on keyboards supported by Omarchy's theme controls.
 - Matching unlock artwork and a preview, available under **Style → Unlock**.
 - A landscape-and-wordmark screensaver.
+- A matching Cliamp music-player preset with a pink background, plum text, and berry accents.
 
 Use **Super + Ctrl + Space** to cycle the wallpapers. Select the matching unlock artwork separately under **Style → Unlock**.
 
@@ -35,6 +36,23 @@ Update this theme and reapply it:
 git -C "$HOME/.config/omarchy/themes/bubblegum" pull --ff-only
 omarchy theme set bubblegum
 ```
+
+## Cliamp
+
+The [Cliamp preset](cliamp/bubblegum.toml) uses Bubblegum's pink background and plum text, with darker berry accents and green and amber status colors for readability. All six foreground colors meet Cliamp's 4.5:1 text-contrast target against the preset's background.
+
+After installing Bubblegum, link the preset into Cliamp's theme directory. Run these commands from your own desktop terminal, **without `sudo`**:
+
+```bash
+mkdir -p "$HOME/.config/cliamp/themes"
+ln -sfn "$HOME/.config/omarchy/themes/bubblegum/cliamp/bubblegum.toml" "$HOME/.config/cliamp/themes/bubblegum.toml"
+```
+
+Open Cliamp, press **`t`**, select **`bubblegum`**, and press **Enter**. Cliamp saves the selection. The link keeps the preset up to date when you update this repository; reselect it or restart Cliamp to load changed colors.
+
+Cliamp's theme selection is independent of the desktop theme. Use **Default - Terminal colors** in its picker to return to the terminal's palette. If you use `CLIAMP_CONFIG_DIR` or `XDG_CONFIG_HOME`, put the link in that Cliamp config directory's `themes` folder instead.
+
+See [Cliamp's theme guide](https://github.com/bjarneo/cliamp/blob/main/docs/themes.md) for its theme format and controls.
 
 ## Files and other GNOME apps
 

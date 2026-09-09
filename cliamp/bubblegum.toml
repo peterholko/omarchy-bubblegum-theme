@@ -1,0 +1,9 @@
+# Bubblegum for Cliamp: pink, plum, and berry colors derived from the Omarchy palette.
+# Berry, green, and amber are darker here for readable text on a light background.
+bg = "#fff4f8"
+accent = "#cc2f65"
+bright_fg = "#3a1f3d"
+fg = "#5e3d63"
+green = "#1d7444"
+yellow = "#946200"
+red = "#d7263d"
